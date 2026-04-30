@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-set -euo pipefail
+# c
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 CORE_DIR="$(cd "$SCRIPT_DIR/../../core" && pwd)"
 
-OUTDIR=/DATA/disk2/zhurui/A_entry/paper_codex/intraplot
-POST_ROOT=/DATA/disk1/zhurui/ablation_study_step_2_3
+OUTDIR=/DATA/disk2/zhurui/A_entry/new_paper_1_2/intraplot
+POST_ROOT=/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_1_2
 
-export MPLCONFIGDIR=/tmp/matplotlib-codex
+export MPLCONFIGDIR=/DATA/disk1/zhurui/matplotlib-codex
 mkdir -p "$MPLCONFIGDIR"
 
-for strat in normal_2 normal_3; do
+for strat in normal_1 normal_2 normal_3; do
   label="${strat/normal_/n}"
   python "$CORE_DIR/ent_pos_paper.py" \
-    --train_base "/DATA/disk2/zhurui/A_entry/results/verl_2_3/${strat}__3.jsonl" \
-    --train_post "${POST_ROOT}/${strat}/vllm_rollouts_training/grpo_step3-dapo17k-8_rollout-test-temp_1.0-top_p_1.0-top_k_-1.jsonl" \
+    --train_base "/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_1_2/$strat/verl_rollouts/2.jsonl" \
+    --train_post "${POST_ROOT}/${strat}/vllm_rollouts/grpo_step200-dapo17k-8_rollout-test-temp_1.0-top_p_1.0-top_k_-1.jsonl" \
     --strategy "$strat" \
     --display_name "$label" \
     --outdir "$OUTDIR" \

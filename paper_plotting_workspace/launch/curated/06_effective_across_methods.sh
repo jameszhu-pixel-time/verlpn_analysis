@@ -3,17 +3,15 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 CORE_DIR="$(cd "$SCRIPT_DIR/../../core" && pwd)"
-
+infer_name=grpo_step200-dapo17k-8_rollout-test-temp_1.0-top_p_1.0-top_k_-1.jsonl
 python "$CORE_DIR/effective_rollout_across_methods.py" \
-  --base ref=/DATA/disk2/zhurui/A_entry/ablation_train/dapo/verl_rollouts/3.jsonl \
-  --base n2=/DATA/disk2/zhurui/A_entry/results/verl_2_3/normal_2__3.jsonl \
-  --base n3=/DATA/disk2/zhurui/A_entry/results/verl_2_3/normal_3__3.jsonl \
-  --base annealed=/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_2_3/annealed/verl_rollouts/3.jsonl \
-  --post ref=/DATA/disk2/zhurui/A_entry/ablation_train/dapo/vllm_rollouts_train/grpo_step3-dapo17k-8_rollout-test-temp_1.0-top_p_1.0-top_k_-1.jsonl \
-  --post n2=/DATA/disk1/zhurui/ablation_study_step_2_3/normal_2/vllm_rollouts_training/grpo_step3-dapo17k-8_rollout-test-temp_1.0-top_p_1.0-top_k_-1.jsonl \
-  --post n3=/DATA/disk1/zhurui/ablation_study_step_2_3/normal_3/vllm_rollouts_training/grpo_step3-dapo17k-8_rollout-test-temp_1.0-top_p_1.0-top_k_-1.jsonl \
-  --post annealed=/DATA/disk1/zhurui/ablation_study_step_2_3/annealed/vllm_rollouts_train/grpo_step3-dapo17k-8_rollout-test-temp_1.0-top_p_1.0-top_k_-1.jsonl \
-  --outdir /DATA/disk2/zhurui/A_entry/paper_codex/effective_across_methods_2_3 \
+  --base n1=/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_1_2/normal_1/verl_rollouts/2.jsonl \
+  --base n2=/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_1_2/normal_2/verl_rollouts/2.jsonl \
+  --base n3=/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_1_2/normal_3/verl_rollouts/2.jsonl \
+  --post n1=/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_1_2/normal_1/vllm_rollouts/$infer_name \
+  --post n2=/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_1_2/normal_2/vllm_rollouts/$infer_name \
+  --post n3=/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_1_2/normal_3/vllm_rollouts/$infer_name \
+  --outdir /DATA/disk2/zhurui/A_entry/paper_codex/effective_across_methods_2_13 \
   --subset all \
   --abs_T 3072 \
   --rel_bins 128 \
