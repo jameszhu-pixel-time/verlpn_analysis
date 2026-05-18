@@ -1,0 +1,15 @@
+{
+  "strategy": "normal_2",
+  "display_name": "n2",
+  "train_base": "/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_1_2/normal_2/verl_rollouts/2.jsonl",
+  "train_post": "/DATA/disk2/zhurui/A_entry/ablation_train/ablation_study_step_1_2/normal_2/vllm_rollouts/grpo_step200-dapo17k-8_rollout-test-temp_1.0-top_p_1.0-top_k_-1.jsonl",
+  "token_metric": "entropy",
+  "N2P_qids": 122,
+  "N2N_qids": 363,
+  "N2P_norm_curves": 122,
+  "N2N_norm_curves": 363,
+  "N2P_abs_curves": 122,
+  "N2N_abs_curves": 363,
+  "M": 256,
+  "abs_T": 3072
+}

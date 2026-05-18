@@ -1,0 +1,122 @@
+{
+  "n2:N2P": {
+    "n": 0,
+    "mean": NaN,
+    "std": NaN,
+    "q10": NaN,
+    "q25": NaN,
+    "q50": NaN,
+    "q75": NaN,
+    "q90": NaN,
+    "moment_skewness": NaN,
+    "bowley_skewness": NaN,
+    "right_tail_cutoff_q3_1p5iqr": NaN,
+    "right_tail_mass_q3_1p5iqr": NaN,
+    "right_tail_mass_q90": NaN,
+    "mean_minus_median": NaN
+  },
+  "n2:N2N": {
+    "n": 0,
+    "mean": NaN,
+    "std": NaN,
+    "q10": NaN,
+    "q25": NaN,
+    "q50": NaN,
+    "q75": NaN,
+    "q90": NaN,
+    "moment_skewness": NaN,
+    "bowley_skewness": NaN,
+    "right_tail_cutoff_q3_1p5iqr": NaN,
+    "right_tail_mass_q3_1p5iqr": NaN,
+    "right_tail_mass_q90": NaN,
+    "mean_minus_median": NaN
+  },
+  "n3:N2P": {
+    "n": 0,
+    "mean": NaN,
+    "std": NaN,
+    "q10": NaN,
+    "q25": NaN,
+    "q50": NaN,
+    "q75": NaN,
+    "q90": NaN,
+    "moment_skewness": NaN,
+    "bowley_skewness": NaN,
+    "right_tail_cutoff_q3_1p5iqr": NaN,
+    "right_tail_mass_q3_1p5iqr": NaN,
+    "right_tail_mass_q90": NaN,
+    "mean_minus_median": NaN
+  },
+  "n3:N2N": {
+    "n": 0,
+    "mean": NaN,
+    "std": NaN,
+    "q10": NaN,
+    "q25": NaN,
+    "q50": NaN,
+    "q75": NaN,
+    "q90": NaN,
+    "moment_skewness": NaN,
+    "bowley_skewness": NaN,
+    "right_tail_cutoff_q3_1p5iqr": NaN,
+    "right_tail_mass_q3_1p5iqr": NaN,
+    "right_tail_mass_q90": NaN,
+    "mean_minus_median": NaN
+  },
+  "_ranking": {
+    "by_bowley_skewness_desc": [
+      [
+        "n2:N2N",
+        NaN
+      ],
+      [
+        "n2:N2P",
+        NaN
+      ],
+      [
+        "n3:N2N",
+        NaN
+      ],
+      [
+        "n3:N2P",
+        NaN
+      ]
+    ],
+    "by_moment_skewness_desc": [
+      [
+        "n2:N2N",
+        NaN
+      ],
+      [
+        "n2:N2P",
+        NaN
+      ],
+      [
+        "n3:N2N",
+        NaN
+      ],
+      [
+        "n3:N2P",
+        NaN
+      ]
+    ],
+    "by_right_tail_mass_q3_1p5iqr_desc": [
+      [
+        "n2:N2N",
+        NaN
+      ],
+      [
+        "n2:N2P",
+        NaN
+      ],
+      [
+        "n3:N2N",
+        NaN
+      ],
+      [
+        "n3:N2P",
+        NaN
+      ]
+    ]
+  }
+}
